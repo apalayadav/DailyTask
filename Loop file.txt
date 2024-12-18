@@ -1,0 +1,55 @@
+# Number of the rows in the triangle
+rows = 7  
+
+for i in range(rows, 0, -1):  
+    print('*' * i)
+
+
+
+# Number of rows in the triangle
+rows = 5
+
+for i in range(1, rows + 1):
+    # Print spaces before asterisks
+    print('-' * (rows - i) + '*' * i)
+
+
+
+# Number of rows in the pattern
+rows = 5
+
+for i in range(1, rows + 1):
+    pattern = ''
+    for j in range(1, i + 1):
+        # Adding 1 if column number is odd, otherwise 0
+        pattern += '1' if j % 2 != 0 else '0'
+    print(pattern)
+
+
+
+# Number of rows
+rows = 5
+
+for i in range(1, rows + 1):
+    # Printing space
+    print(" " * (rows - i), end="")
+    
+    # Printing pattern of 1s and 0s
+    for j in range(1, i + 1):
+        print((i + j) % 2, end="")
+    
+    print()  
+
+
+
+# Number of rows in the pattern
+rows = 5
+
+#Number of stars in the first row
+stars = 9
+
+# Loop to generate each row 
+for i in range(rows):
+    # Printing '-' repeated 'i' times 
+    # Printing '*' repeated 'stars - 2 * i' times 
+    print('-' * i + '*' * (stars - 2 * i))
