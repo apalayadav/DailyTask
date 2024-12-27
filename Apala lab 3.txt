@@ -1,0 +1,106 @@
+
+que 1
+
+# enter the year
+year = int(input("Enter a year: "))
+
+# Checking if the year is a leap year
+if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
+    print("this is a leap year.")
+else:
+    print("this is not a leap year.")
+
+que 2
+
+
+# taking three numbers
+number1 = float(input("Enter the first number: "))
+number2 = float(input("Enter the second number: "))
+number3 = float(input("Enter the third number: "))
+
+# Finding the largest number
+if number1 >= number2 and number1 >= number3:
+    print("number1 is largest")
+elif number2 >= number1 and number2 >= number3:
+    print("number2 is largest")
+else:
+    print("number 3 is largest")
+
+
+que 3
+
+
+
+# Taking input from the user
+user_input = int(input("Enter a number:"))
+
+#Checking if the number is negative, positive or zero
+
+if user_input >0:
+        print("The number is positive")
+
+elif user_input <0:
+
+       print("The number is negative")
+
+else:
+        print("The number is zero")
+
+
+
+
+que 4
+
+
+
+
+# Input: Product code and order amount
+product_code = int(input("Enter the product code (1: Battery-based, 2: Key-based, 3: Electrical Charging-based): "))
+order_amount = float(input("Enter the order amount: "))
+
+# Applying discount based on the product code and amount 
+if product_code == 1:  # Battery-based toys
+    if order_amount > 1000:
+        discount = 0.10  # 10% discount
+elif product_code == 2:  # Key-based toys
+    if order_amount > 100:
+        discount = 0.05  # 5% discount
+elif product_code == 3:  # Electrical charging-based toys
+    if order_amount > 500:
+        discount = 0.10  # 10% discount
+else:
+    print("This product is nnot present.")
+
+# Calculating the actual amount to pay
+if product_code in [1, 2, 3]:
+    discount_amount = order_amount * discount
+    net_amount = order_amount - discount_amount
+    print(f"Discount: Rs. {discount_amount:.2f}")
+    print(f"Net amount to pay: Rs. {net_amount:.2f}")
+
+
+
+que 5
+
+
+# distance travelled
+distance = float(input("Enter the distance traveled (in km): "))
+
+# Calculating the fare
+if 1 <= distance <= 50:
+    fare = distance * 8  # Rs. 8 per km
+elif 51 <= distance <= 100:
+    fare = distance * 10  # Rs. 10 per km
+elif distance > 100:
+    fare = distance * 12  # Rs. 12 per km
+else:
+    fare = 0
+    print("No distance covered.")
+
+# Output the fare
+if fare > 0:
+    print(f"Total fare: Rs. {fare:.2f}")
+
+
+
+
