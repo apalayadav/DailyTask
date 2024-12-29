@@ -1,0 +1,64 @@
+Que 1.Write a Python program to Count all letters, digits, and special
+
+symbols from the given string
+# given string
+string = "P@#yn26at^&i5ve"
+
+# Count letters, digits, and special characters
+charcters = sum(char.isalpha() for char in string)
+digits = sum(char.isdigit() for char in string)
+special_char = len(string) - letters - digits  # Correct the typo 'sting' to 'string'
+
+# output
+print(f"Char: {charcters}, Digits: {digits}, Special Characters: {special_char}")
+
+
+que 2  Write a Python program to remove duplicate characters of a given
+
+string
+# diffining the string
+def remove_duplicates(input_string):
+    return ''.join(sorted(set(input_string), key=input_string.index))
+
+# Removing the Duplicate
+input_string = "String and String Function"
+output = remove_duplicates(input_string)
+#output
+print("Output:", output)
+
+
+que 3.. Write a Python program to count Uppercase, Lowercase, special
+
+character and numeric values in a given string
+
+#diffning the string
+def count_characters(input_string):
+    uppercase = sum(1 for char in input_string if char.isupper())
+    lowercase = sum(1 for char in input_string if char.islower())
+    numbers = sum(1 for char in input_string if char.isdigit())
+    specials = sum(1 for char in input_string if not char.isalnum())
+
+    return uppercase, lowercase, numbers, specials
+
+#Counting the charaters
+input_string = "Hell0 W0rld ! 123 * # welcome to pYtHoN"
+uppercase, lowercase, numbers, specials = count_characters(input_string)
+
+# Output
+print(f"UpperCase: {uppercase}, LowerCase: {lowercase}, NumberCase: {numbers}, SpecialCase: {specials}")
+
+
+que 4. Write a Python Count vowels in a string
+
+#diffining the string
+def count_vowels(input_string):
+    vowels = "aeiouAEIOU"
+    count = sum(1 for char in input_string if char in vowels)
+    return count
+
+# Conting the vowels
+input_string = "Welcome to Python Assignment"
+vowel_count = count_vowels(input_string)
+
+#output
+print(f"Number of vowels: {vowel_count}")
