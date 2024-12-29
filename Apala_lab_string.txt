@@ -1,0 +1,53 @@
+Que 1.
+
+# Input string
+sentence = "To change the overall look of your document. To change the look available in the gallery"
+
+# Converting the string to lowercase 
+import string
+sentence = sentence.lower().translate(str.maketrans('', '', string.punctuation))
+
+word_count = {}
+for word in sentence.split():
+    word_count[word] = word_count.get(word, 0) + 1
+
+# Output
+print(word_count)
+
+que 2.
+
+
+# Input given string
+string = "\nBest \nDeeptech \nPython \nTraining\n"
+
+# Removeing newlines
+remove_string = string.replace("\n", " ")
+
+# Output
+print(remove_string)
+
+que 3. 
+
+# Input given string
+string = "Deeptech Python Training"
+
+# Split the string 
+string_1 = " ".join(string.split()[::-1])
+
+# Output
+print(string)
+
+que 4.
+
+# Input the given string
+string = "Welcome to python Training"
+
+# counting the vowles
+vowels = "aeiou"
+vowel_list = [char for char in string.lower() if char in vowels]
+
+# output
+print(f"Total numbers of vowels: {len(vowel_list)}")
+print(f"Vowels: {' '.join(vowel_list)}")
+
+
