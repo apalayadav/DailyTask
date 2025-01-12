@@ -1,0 +1,77 @@
+QUE 1. 1. Write a Python program to Get Only unique items from two sets.
+Input:
+set1 = {10, 20, 30, 40, 50}
+set2 = {30, 40, 50, 60, 70}
+  
+
+# Input the given set
+set1 = {10, 20, 30, 40, 50}
+set2 = {30, 40, 50, 60, 70}
+
+# Unique items from both sets
+unique_item_set = set1 ^ set2
+
+# Output 
+print("Unique items from both sets:", unique_item_set)
+
+
+
+QUE 2. Write a Python program to Return a set of elements present in Set A or B, but
+not both.
+Input:
+set1 = {10, 20, 30, 40, 50}
+set2 = {30, 40, 50, 60, 70}
+
+
+# Input the given set
+set1 = {10, 20, 30, 40, 50}
+set2 = {30, 40, 50, 60, 70}
+
+# Get elements present in set1 or set2, but not both
+unique_item_set = set1 ^ set2
+
+# Output the result
+print("Elements present in Set A or Set B, but not both are:", unique_item_set)
+
+
+
+QUE 3. Write a Python program to Check if two sets have any elements in common. If
+yes, display the common elements.
+Input:
+set1 = {10, 20, 30, 40, 50}
+set2 = {60, 70, 80, 90, 10}
+
+
+# Input the given set
+set1 = {10, 20, 30, 40, 50}
+set2 = {60, 70, 80, 90, 10}
+
+# Findind common elements in the given set
+common_item_set = set1 & set2
+
+# Checking if there are any common elements
+if common_item_set:
+    print("Common elements:", common_item_set)
+else:
+    print("No common elements.")
+
+
+QUE 4. Write a Python program to Remove items from set1 that are not common to
+both set1 and set2.
+Input:
+set1 = {10, 20, 30, 40, 50}
+set2 = {30, 40, 50, 60, 70}
+
+
+# Input the given set
+set1 = {10, 20, 30, 40, 50}
+set2 = {30, 40, 50, 60, 70}
+
+# Common elements in set1 is given as
+set1 &= set2
+
+# Output 
+print("Common elements:", set1)
+
+
+
