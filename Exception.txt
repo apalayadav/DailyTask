@@ -1,0 +1,137 @@
+1. Write a Python program to handle a ZeroDivisionError exception when dividing a
+
+number by zero
+
+#Input the given number
+    number1 = int(input("Enter the first number: "))
+    number2 = int(input("Enter the second number: "))
+
+    # Division of two numbers
+    result = number1 / number2
+    print("The result is:", result)
+
+except ZeroDivisionError:
+    print("Error: Number can not divide by zero.")
+
+
+2. Write a Python program that prompts the user to input an integer and raises a
+
+ValueError exception if the input is not a valid integer.
+
+    # Taking value from user
+    input_value = input("Enter an integer: ")
+
+    #Converting the input to an integer
+    number = int(input_value)
+
+    print("You entered:", number)
+
+except ValueError:
+    print("Error: Invalid input.")
+
+
+3.create a program to accept choice from user and perform the operation according
+ a. Try except
+
+def try_except():
+    try:
+        # Accept user input
+        number1 = int(input("Enter a number: "))
+        number2 = int(input("Enter a number: "))
+        print("The result is:", num1 / num2)
+    except (ZeroDivisionError, ValueError) as e:
+        print(f"Error: {e}")
+
+try_except()
+
+ b.try multiple except
+
+try:
+    num1 = int(input("Enter a number: "))
+    num2 = int(input("Enter another number: "))
+    print("Result:", num1 / num2)
+except ZeroDivisionError:
+    print("Error: Cannot divide by zero.")
+except ValueError:
+    print("Error: Invalid input, enter integers.")
+
+
+
+c. try except else
+
+try:
+    number1 = int(input("Enter a number: "))
+    number2 = int(input("Enter another number: "))
+    print("Result:", num1 / num2)
+except (ZeroDivisionError, ValueError) as e:
+    print(f"Error: {e}")
+else:
+    print("Operation is correst.")
+
+
+d. finally
+
+def try_finally():
+    try:
+        num1 = int(input("Enter a number: "))
+        num2 = int(input("Enter another number: "))
+        print("Result:", num1 / num2)
+    finally:
+        print("Operation completed.")
+
+choice = int(input("Choose 1 for Try Finally: "))
+if choice == 1:
+    try_finally()
+else:
+    print("Invalid choice.")
+
+
+e. try single except
+
+def try_single_except():
+    try:
+        num1 = int(input("Enter a number: "))
+        num2 = int(input("Enter another number: "))
+        print("Result:", num1 / num2)
+    except Exception as e:
+        print(f"Error: {e}")
+
+choice = int(input("Choose 1 for Try Single Except: "))
+if choice == 1:
+    try_single_except()
+else:
+    print("Invalid choice.")
+ 
+f. raising exception
+
+def raise_exception():
+    try:
+        num1 = int(input("Enter a number: "))
+        if num1 < 0:
+            raise ValueError("Number cannot be negative.")
+        print("You entered:", num1)
+    except ValueError as e:
+        print(f"Error: {e}")
+
+choice = int(input("Choose 1 for Raising Exception: "))
+if choice == 1:
+    raise_exception()
+else:
+    print("Invalid choice.")
+
+4. Write a Python program that prompts the user to input two numbers and raises a
+
+TypeError exception if the inputs are not numerical
+
+
+try:
+    num1 = float(input("Enter the first number: "))
+    num2 = float(input("Enter the second number: "))
+    print(f"The sum is: {num1 + num2}")
+except ValueError:
+    print("Error: Both inputs must be numerical.")
+
+
+
+
+
